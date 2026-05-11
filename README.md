@@ -13,10 +13,6 @@ A Power BI custom visual that generates executive-style commentary from DAX meas
 
 This visual makes **zero network calls**. The `privileges` array in `capabilities.json` is empty, and no external scripts are referenced.
 
-## Screenshots
-
-> _Placeholder — drop screenshots into `assets/screenshots/` before publishing._
-
 ## Data fields
 
 | Role | Kind | Notes |
