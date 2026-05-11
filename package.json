@@ -1,0 +1,24 @@
+{
+  "name": "narrativerules-insight-card",
+  "version": "1.0.0",
+  "description": "NarrativeRules Insight Card — a deterministic, rule-based commentary generator for Power BI. No AI, no API calls.",
+  "keywords": ["powerbi", "narrative", "commentary", "no-ai", "deterministic"],
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "lint": "tsc --noEmit"
+  },
+  "author": { "name": "Syed Hussnain", "email": "maintainers@example.com" },
+  "license": "MIT",
+  "dependencies": {
+    "powerbi-visuals-api": "~5.11.0",
+    "powerbi-visuals-utils-formattingmodel": "6.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "less": "^4.2.0",
+    "powerbi-visuals-tools": "~5.5.1",
+    "typescript": "^5.4.0"
+  }
+}

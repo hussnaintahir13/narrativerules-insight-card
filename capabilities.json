@@ -1,0 +1,90 @@
+{
+  "dataRoles": [
+    { "displayName": "Current Value", "name": "currentValue", "kind": "Measure" },
+    { "displayName": "Previous Value", "name": "previousValue", "kind": "Measure" },
+    { "displayName": "Target Value", "name": "targetValue", "kind": "Measure" },
+    { "displayName": "Variance Value", "name": "varianceValue", "kind": "Measure" },
+    { "displayName": "Variance Percent", "name": "variancePercent", "kind": "Measure" },
+    { "displayName": "Top Driver Name", "name": "topDriverName", "kind": "Grouping" },
+    { "displayName": "Top Driver Value", "name": "topDriverValue", "kind": "Measure" },
+    { "displayName": "Worst Driver Name", "name": "worstDriverName", "kind": "Grouping" },
+    { "displayName": "Worst Driver Value", "name": "worstDriverValue", "kind": "Measure" },
+    { "displayName": "Measure Label", "name": "measureLabel", "kind": "Grouping" },
+    { "displayName": "Category", "name": "category", "kind": "Grouping" },
+    { "displayName": "Custom Prefix", "name": "customPrefix", "kind": "Grouping" },
+    { "displayName": "Custom Suffix", "name": "customSuffix", "kind": "Grouping" }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": { "for": { "in": "measureLabel" } },
+        "values": {
+          "select": [
+            { "bind": { "to": "currentValue" } },
+            { "bind": { "to": "previousValue" } },
+            { "bind": { "to": "targetValue" } },
+            { "bind": { "to": "varianceValue" } },
+            { "bind": { "to": "variancePercent" } },
+            { "bind": { "to": "topDriverValue" } },
+            { "bind": { "to": "worstDriverValue" } }
+          ]
+        }
+      }
+    }
+  ],
+  "objects": {
+    "display": {
+      "properties": {
+        "titleText": { "type": { "text": true } },
+        "showKpis": { "type": { "bool": true } },
+        "showDrivers": { "type": { "bool": true } },
+        "showBadge": { "type": { "bool": true } },
+        "compactMode": { "type": { "bool": true } },
+        "tone": {
+          "type": { "enumeration": [
+            { "value": "executive", "displayName": "Executive" },
+            { "value": "analyst", "displayName": "Analyst" },
+            { "value": "plain", "displayName": "Plain English" },
+            { "value": "short", "displayName": "Short" }
+          ] }
+        }
+      }
+    },
+    "thresholds": {
+      "properties": {
+        "positiveThreshold": { "type": { "numeric": true } },
+        "negativeThreshold": { "type": { "numeric": true } },
+        "targetTolerance": { "type": { "numeric": true } }
+      }
+    },
+    "formatting": {
+      "properties": {
+        "numberFormat": {
+          "type": { "enumeration": [
+            { "value": "auto", "displayName": "Auto" },
+            { "value": "currency", "displayName": "Currency" },
+            { "value": "percentage", "displayName": "Percentage" },
+            { "value": "decimal", "displayName": "Decimal" },
+            { "value": "whole", "displayName": "Whole number" }
+          ] }
+        },
+        "currencySymbol": { "type": { "text": true } },
+        "decimalPlaces": { "type": { "numeric": true } }
+      }
+    },
+    "colors": {
+      "properties": {
+        "backgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "textColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "positiveColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "negativeColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "neutralColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "badgeColor": { "type": { "fill": { "solid": { "color": true } } } }
+      }
+    }
+  },
+  "supportsHighlight": false,
+  "supportsLandingPage": true,
+  "supportsKeyboardFocus": true,
+  "privileges": []
+}
