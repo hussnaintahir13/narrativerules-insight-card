@@ -1,6 +1,6 @@
 # NarrativeRules Insight Card
 
-**Author:** Syed Hussnain
+**Author:** [Syed Hussnain Tahir Sherazi](https://www.syedhussnain.com)
 **License:** MIT
 **Category:** Commentary / no-AI narrative / executive reporting
 
@@ -35,3 +35,11 @@ Most generated-commentary tools rely on AI services that send data to a third pa
 
 ## Privacy & security
 Zero network calls. No third-party JS. `privileges` array is empty. Read-only.
+
+## Author
+**Syed Hussnain Tahir Sherazi** — Power BI / Microsoft Fabric developer building the NarrativeRules Insight Card and other Power BI custom visuals.
+
+- Website: [www.syedhussnain.com](https://www.syedhussnain.com)
+- Email: [Contact@syedhussnain.com](mailto:Contact@syedhussnain.com)
+- LinkedIn: [linkedin.com/in/hussnainsherazi](https://www.linkedin.com/in/hussnainsherazi)
+- GitHub: [github.com/hussnaintahir13](https://github.com/hussnaintahir13)
