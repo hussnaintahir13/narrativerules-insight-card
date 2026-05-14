@@ -93,6 +93,11 @@ See [docs/APP_SOURCE_CHECKLIST.md](docs/APP_SOURCE_CHECKLIST.md).
 
 Fork, branch, PR. By contributing you license your work under MIT.
 
+## Author
+
+Syed Hussnain Tahir Sherazi — Associate Data Engineer, Leicester, UK.
+[www.syedhussnain.com](https://www.syedhussnain.com) · [LinkedIn](https://uk.linkedin.com/in/hussnainsherazi) · contact@syedhussnain.co.uk
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
