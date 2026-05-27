@@ -16,7 +16,10 @@ export class Visual implements IVisual {
     private settings: VisualSettings = new VisualSettings();
     private formattingSettingsService: FormattingSettingsService;
 
-    constructor(options: VisualConstructorOptions) {
+    constructor(options?: VisualConstructorOptions) {
+        if (!options) {
+            throw new Error("NarrativeRules: VisualConstructorOptions are required.");
+        }
         this.root = options.element;
         this.root.classList.add("nr-root");
         this.formattingSettingsService = new FormattingSettingsService();
@@ -65,7 +68,7 @@ export class Visual implements IVisual {
     private render(result: NarrativeResult, width: number, height: number): void {
         const colors = this.getColors();
         const d = this.settings.display;
-        this.root.innerHTML = "";
+        while (this.root.firstChild) this.root.removeChild(this.root.firstChild);
         this.root.style.background = colors.background;
         this.root.style.color = colors.text;
         this.root.setAttribute("role", "region");
@@ -145,10 +148,18 @@ export class Visual implements IVisual {
         const wrap = document.createElement("div");
         wrap.className = "nr-empty";
         wrap.setAttribute("role", "status");
-        wrap.innerHTML = `
-            <h3>NarrativeRules Insight Card</h3>
-            <p>Bind at least a <strong>Current Value</strong> and either a <strong>Previous Value</strong> or <strong>Target Value</strong> to generate commentary.</p>
-        `;
+        const h = document.createElement("h3");
+        h.textContent = "NarrativeRules Insight Card";
+        wrap.appendChild(h);
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode("Bind at least a "));
+        const cur = document.createElement("strong"); cur.textContent = "Current Value"; p.appendChild(cur);
+        p.appendChild(document.createTextNode(" and either a "));
+        const prev = document.createElement("strong"); prev.textContent = "Previous Value"; p.appendChild(prev);
+        p.appendChild(document.createTextNode(" or "));
+        const tgt = document.createElement("strong"); tgt.textContent = "Target Value"; p.appendChild(tgt);
+        p.appendChild(document.createTextNode(" to generate commentary."));
+        wrap.appendChild(p);
         this.root.appendChild(wrap);
     }
 }

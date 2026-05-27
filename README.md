@@ -2,6 +2,10 @@
 
 A Power BI custom visual that generates executive-style commentary from DAX measures — **without AI, external services, or any data leaving Power BI**. Deterministic, rule-based, privacy-friendly.
 
+## Quick install (no build required)
+
+Grab the latest `.pbiviz` from [`release/`](release/) (use **Download raw file** in GitHub) and import via **Visualizations → … → Import a visual from a file** in Power BI Desktop. Full steps in [`release/README.md`](release/README.md).
+
 ## Why no-AI commentary matters
 
 - **Privacy** — nothing leaves the Power BI sandbox; no third-party endpoint touches your figures.

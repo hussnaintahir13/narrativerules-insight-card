@@ -4,7 +4,7 @@
     "displayName": "NarrativeRules Insight Card",
     "guid": "narrativeRulesInsightCardF7BCE16A2D08423FAB73C1FAE5D041A6",
     "visualClassName": "Visual",
-    "version": "1.0.0",
+    "version": "1.0.0.0",
     "description": "Deterministic, rule-based executive commentary from DAX measures. No AI, no external services, privacy-friendly.",
     "supportUrl": "https://github.com/hussnaintahir13/narrativerules-insight-card/issues",
     "gitHubUrl": "https://github.com/hussnaintahir13/narrativerules-insight-card"
