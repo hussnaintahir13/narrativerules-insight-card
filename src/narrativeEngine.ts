@@ -150,6 +150,10 @@ export function buildNarrative(m: NarrativeMeasures, opts: NarrativeOptions): Na
         formattedTargetStatus: target.phrase || (targetVariancePct !== undefined ? formatPercent(targetVariancePct) : undefined),
         hasData: true,
         category: m.category,
-        measureLabel: m.measureLabel
+        measureLabel: m.measureLabel,
+        topDriverName: m.topDriverName,
+        worstDriverName: m.worstDriverName,
+        formattedTopDriverValue: m.topDriverValue !== undefined ? formatValue(m.topDriverValue, opts.numberFormat, opts.currencySymbol, opts.decimalPlaces) : undefined,
+        formattedWorstDriverValue: m.worstDriverValue !== undefined ? formatValue(m.worstDriverValue, opts.numberFormat, opts.currencySymbol, opts.decimalPlaces) : undefined
     };
 }

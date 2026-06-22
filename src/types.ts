@@ -43,6 +43,10 @@ export interface NarrativeResult {
     hasData: boolean;
     category?: string;
     measureLabel?: string;
+    topDriverName?: string;
+    worstDriverName?: string;
+    formattedTopDriverValue?: string;
+    formattedWorstDriverValue?: string;
 }
 
 export interface ColorScheme {

@@ -1,5 +1,8 @@
 # NarrativeRules Insight Card
 
+## Quick start (non-technical)
+New here? Read **[HOW-TO-USE.md](HOW-TO-USE.md)** for a plain-English guide to importing and using this visual.
+
 A Power BI custom visual that generates executive-style commentary from DAX measures — **without AI, external services, or any data leaving Power BI**. Deterministic, rule-based, privacy-friendly.
 
 ## Quick install (no build required)

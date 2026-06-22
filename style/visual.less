@@ -31,6 +31,23 @@
         }
     }
 
+    .nr-drivers {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 10px;
+
+        .nr-driver {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            font-size: 0.9em;
+            .nr-driver-label { opacity: 0.7; }
+            .nr-driver-name { font-weight: 600; }
+            .nr-driver-value { margin-left: auto; font-weight: 700; }
+        }
+    }
+
     .nr-badge {
         display: inline-block;
         padding: 4px 10px;

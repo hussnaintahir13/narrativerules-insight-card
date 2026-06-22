@@ -139,9 +139,31 @@ export class Visual implements IVisual {
     }
 
     private buildDriverSection(result: NarrativeResult, colors: ColorScheme): HTMLElement | undefined {
-        // Drivers come from the engine via the narrative text — duplicate here only if values are present
-        // To keep visual.ts clean, we infer driver presence from the absence/presence of values in the engine output.
-        return undefined;
+        if (!result.topDriverName && !result.worstDriverName) return undefined;
+
+        const section = document.createElement("div");
+        section.className = "nr-drivers";
+        section.setAttribute("role", "list");
+        section.setAttribute("aria-label", "Performance drivers");
+
+        const add = (label: string, name: string | undefined, value: string | undefined, tone: string): void => {
+            if (!name) return;
+            const item = document.createElement("div");
+            item.className = "nr-driver";
+            item.setAttribute("role", "listitem");
+            const l = document.createElement("span"); l.className = "nr-driver-label"; l.textContent = label;
+            const n = document.createElement("span"); n.className = "nr-driver-name"; n.textContent = name; n.style.color = tone;
+            item.appendChild(l); item.appendChild(n);
+            if (value) {
+                const v = document.createElement("span"); v.className = "nr-driver-value"; v.textContent = value;
+                item.appendChild(v);
+            }
+            section.appendChild(item);
+        };
+
+        add("Top driver", result.topDriverName, result.formattedTopDriverValue, colors.positive);
+        add("Worst driver", result.worstDriverName, result.formattedWorstDriverValue, colors.negative);
+        return section;
     }
 
     private renderEmptyState(): void {

@@ -16,17 +16,22 @@
   ],
   "dataViewMappings": [
     {
-      "categorical": {
-        "categories": { "for": { "in": "measureLabel" } },
-        "values": {
+      "table": {
+        "rows": {
           "select": [
-            { "bind": { "to": "currentValue" } },
-            { "bind": { "to": "previousValue" } },
-            { "bind": { "to": "targetValue" } },
-            { "bind": { "to": "varianceValue" } },
-            { "bind": { "to": "variancePercent" } },
-            { "bind": { "to": "topDriverValue" } },
-            { "bind": { "to": "worstDriverValue" } }
+            { "for": { "in": "measureLabel" } },
+            { "for": { "in": "category" } },
+            { "for": { "in": "topDriverName" } },
+            { "for": { "in": "worstDriverName" } },
+            { "for": { "in": "customPrefix" } },
+            { "for": { "in": "customSuffix" } },
+            { "for": { "in": "currentValue" } },
+            { "for": { "in": "previousValue" } },
+            { "for": { "in": "targetValue" } },
+            { "for": { "in": "varianceValue" } },
+            { "for": { "in": "variancePercent" } },
+            { "for": { "in": "topDriverValue" } },
+            { "for": { "in": "worstDriverValue" } }
           ]
         }
       }
